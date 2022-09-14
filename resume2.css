@@ -1,0 +1,413 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    margin: 0%;
+}
+/* color codes: #a5c5dd #90b3d1 #4a6074 #acb4bb */
+/* smallest:320px
+common: 375 to 414px
+phone: 380px
+landscape mode: 480px
+tablets: 768px
+desktop: 980px and up
+375x667
+414x896
+360x780
+700-1010px
+0-450px*/
+header{
+    width: 100%;
+    height: 130vh;
+    background: url("trees-4741364.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: local;
+    background-size: cover;
+    
+}
+.heading{
+    
+    color: #3b5166;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+ @keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes up {
+    from{
+        transform: translateY(-20vh);
+    }
+    /* 75%{
+        transform: translate(10vw, 45vh);
+    } */
+    to{
+        transform: translateY(90vh);
+    }
+}
+.snowflake{
+    animation: rotate 4s linear infinite  ;
+}
+.rotate{
+    animation: up 8s linear infinite;
+} 
+.name{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.middle{
+    position: absolute;
+    top:0;
+    left: 45%; /*use 40% while making responsive*/
+    z-index: 0;
+    animation-delay: 1s;
+}
+.delay{
+    left: 30%;
+    animation-delay: 1.5s;
+}
+.right{
+    left:65%;
+}
+/* NAVIGATION BAR */
+nav{
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: flex-end;
+    
+    
+}
+nav a{
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #3b5166;
+    z-index: 2;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    transform: scale(1.3);
+}
+/* nav img{
+    margin-right: 60vw;
+    border-radius: 50%;
+    background-color: white;
+} */
+
+/* HEADINGS */
+@font-face {
+    font-family: myFirstFont;
+    src: url(KaushanScript-Regular.ttf);
+  }
+h1,h2,h3,nav{
+    align-self: center;
+    font-family: myFirstFont;
+    font-weight: 500;
+}
+h2{
+    margin: 0;
+    font-size: 4rem;
+}
+/* during making in responsive decrease font size */
+h1{
+    margin-bottom: 0;
+    margin-top: 50px;
+    font-size: 6rem;
+}
+h3{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* INFORMATION SECTION */
+main{
+    /* background-color: rgba(195,214,231,255); */
+    background-color: white;
+    height: auto;
+    
+    color: #3b5166;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 20% 0 20%;
+}
+p{
+    font-family: sans-serif;
+    font-style: italic;
+}
+/* SECTION ONE */
+.one{
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* SNOWMAN */
+.snowman{
+    height: 24vw;
+    width: 18vw;
+    align-self: flex-end;
+    margin-bottom: 1em;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+/* SECTION TWO */
+.two{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+}
+.two h2{
+    border-bottom: 5px solid #90b3d1;
+}
+.sub-text{
+    text-align: left;
+    font-size: 1.2rem;
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-evenly;
+}
+.para2{
+    text-align: right;
+}
+.side-icon{
+    width:120px ;
+    height:130px;
+    align-self: center;
+} 
+.sub-text div{
+    width: 60%;
+}
+/*  FOOTER */
+footer
+{
+    text-align: center;
+    background-color: #dff5fa;
+    border-radius: 15px;
+    margin: 25px 0;
+    color:#183776;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer p{
+    width: 60%;
+    font-size: 1.7rem;
+    
+}
+.footer-heading{
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+}
+.footer-heading div{
+    margin-right: 1rem;
+}
+footer img{
+    width: 140px ;
+    height: 150px;
+    align-self: center;
+    margin-top: 25px;
+}
+button{
+    width:150px;
+    height:70px;
+    background-color: white;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color: #24426f;
+    font-weight: 700;
+    font-style: italic;
+    border: 2px solid #24426f;
+    transition: all 0.5s;
+}
+
+ button:hover {
+    background-color: #24426f;
+    color: white;
+    transform: scale(1.1); 
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+  } 
+button span{
+    position: relative;
+    transition: all 0.5s;
+}
+button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    /* transition: all 0.5s; */
+}
+button:hover span {
+    padding-right: 15px;
+  }
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+/* MEDIA QUERIES */
+
+
+  @media screen and (max-width: 620px){
+    nav a{
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+}
+  
+@media screen and (max-width:470px) {
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    main{
+        padding: 5% 5% 0 5%;
+    }
+    
+    .sub-text h3{
+        font-size: 1.3rem;
+    }
+    .text p, .sub-text div p{
+        font-size: 1rem;
+    }
+    .sub-text div p{
+        font-size: 0.8rem;
+    }
+    header{
+        height: 90vh;
+    }
+    .side-icon{
+        width: 80px;
+        height: 80px;
+    }
+    .footer-heading h1{
+        font-size: 2.5rem;
+    }
+    .footer-heading h2{
+        font-size: 1.7rem;
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    button{
+        width:100px;
+        height:50px;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+    .footer-heading div{
+        margin-right: 0;
+    }
+    footer img{
+        width: 100px ;
+        height: 100px;
+        align-self: center;
+    }
+}
+@media screen and (min-width:470px) and (max-width:790px) {
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    header{
+        height: 100vh;
+    }
+    main{
+        padding: 10% 7% 0 7%;
+    }
+    .text p, .sub-text div p{
+        font-size: 1.2rem;
+    }
+    footer p{
+        font-size: 1.2rem;
+    }
+    .footer-heading h1{
+        font-size: 3.5rem;
+    }
+    .footer-heading h2{
+        font-size: 2.8rem;
+    }
+    button{
+        width:120px;
+        height:50px;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+    .footer-heading div{
+        margin-right: 0;
+    }
+}
+@media screen and (min-width:470px) and (max-width:510px) {
+    .sub-text h3{
+        font-size: 1.5rem;
+    }
+    .sub-text div p{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:510px) and (max-width:570px) {
+    .sub-text h3{
+        font-size: 1.8rem;
+    }
+    .sub-text div p{
+        font-size: 1.1rem;
+    }
+   
+}
+@media screen and (min-width:570px) and (max-width:790px) {
+    .sub-text h3{
+        font-size: 2rem;
+    }
+   
+}
+
+
+@media screen and (min-width:790px)and (max-width:1010px) {
+    main{
+        padding: 10% 10% 0 10%;
+    }
+    .footer-heading h1{
+        font-size: 4.5rem;
+    }
+    .footer-heading h2{
+        font-size: 3rem;
+    }
+    button{
+        width:130px;
+        height:60px;
+        font-size: 1.2rem;
+    }
+    .gentlemen{
+        width: 140px;
+        height: 150px;
+    }
+}
